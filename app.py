@@ -2,8 +2,9 @@ from collections import Counter
 import codecs
 import csv
 import os
+import sys
 
-CSV_DIR = 'data'
+CSV_DIR = sys.argv[1]
 
 keywords = []
 keyword_counter = Counter()

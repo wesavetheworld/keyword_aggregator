@@ -1,9 +1,11 @@
 RESULTS=results.csv
+DOWNLOADS=~/Downloads
+CSV_DIR=data
 
 all: build check
 
 build:
-	-mv ~/Downloads/download-*.csv data
+	-mv ${DOWNLOADS}/download-*.csv ${CSV_DIR}
 
 check:
-	python app.py > ${RESULTS}
+	python app.py ${CSV_DIR} > ${RESULTS}
