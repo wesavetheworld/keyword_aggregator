@@ -5,7 +5,7 @@ CSV_DIR=data
 all: build check
 
 build:
-	-mkdir data
+	-mkdir ${CSV_DIR}
 	-mv ${DOWNLOADS}/download-*.csv ${CSV_DIR}
 
 check:
