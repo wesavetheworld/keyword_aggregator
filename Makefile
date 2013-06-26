@@ -1,10 +1,9 @@
-all: build pep8 check
+RESULTS=results.csv
+
+all: build check
 
 build:
 	-mv ~/Downloads/download-*.csv data
 
-pep8:
-	autopep8 --in-place app.py
-
 check:
-	python app.py
+	python app.py > ${RESULTS}
